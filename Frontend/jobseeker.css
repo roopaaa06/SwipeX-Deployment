@@ -3,34 +3,23 @@
 ========================================== */
 
 * {
-
     margin: 0;
-
     padding: 0;
-
     box-sizing: border-box;
-
-    font-family:
-        "Segoe UI",
-        sans-serif;
-
+    font-family: "Segoe UI", sans-serif;
 }
 
-
-/* ==========================================
-   BODY
-========================================== */
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
 
 body {
-
     background: #070B18;
-
     height: 100vh;
-
     overflow: hidden;
-
     color: #F8FAFC;
-
 }
 
 
@@ -39,11 +28,9 @@ body {
 ========================================== */
 
 .dashboard {
-
     display: flex;
-
+    width: 100%;
     height: 100vh;
-
 }
 
 
@@ -52,24 +39,21 @@ body {
 ========================================== */
 
 .sidebar {
-
     width: 260px;
-
     background: #0B1026;
-
     color: white;
 
     display: flex;
-
     flex-direction: column;
 
     padding: 22px 15px;
 
-    border-right:
-        1px solid #1B2340;
+    border-right: 1px solid #1B2340;
 
     flex-shrink: 0;
 
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 
@@ -78,36 +62,28 @@ body {
 ========================================== */
 
 .brand {
-
     display: flex;
-
     align-items: center;
 
     gap: 10px;
 
-    padding:
-        0 8px 22px;
+    padding: 0 8px 22px;
 
-    border-bottom:
-        1px solid #1B2340;
+    border-bottom: 1px solid #1B2340;
 
     margin-bottom: 25px;
-
 }
 
-
 .brand-icon {
-
     width: 38px;
-
     height: 38px;
+
+    flex-shrink: 0;
 
     border-radius: 11px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     background:
@@ -122,29 +98,18 @@ body {
     box-shadow:
         0 5px 18px
         rgba(59, 130, 246, .25);
-
 }
-
 
 .brand h2 {
-
     font-size: 20px;
-
     line-height: 20px;
-
 }
 
-
 .brand span {
-
     font-size: 8px;
-
     color: #38BDF8;
-
     font-weight: 800;
-
     letter-spacing: 1px;
-
 }
 
 
@@ -153,24 +118,17 @@ body {
 ========================================== */
 
 .sidebar-menu {
-
     display: flex;
-
     flex-direction: column;
-
     gap: 5px;
-
 }
 
-
 .sidebar button {
-
     width: 100%;
 
     padding: 12px 14px;
 
     border: none;
-
     border-radius: 10px;
 
     background: transparent;
@@ -186,25 +144,17 @@ body {
     transition: .25s;
 
     display: flex;
-
     align-items: center;
 
     gap: 12px;
-
 }
-
 
 .sidebar button:hover {
-
     background: #151D3B;
-
     color: white;
-
 }
 
-
 .sidebar button.active {
-
     background:
         linear-gradient(
             90deg,
@@ -217,7 +167,6 @@ body {
     box-shadow:
         0 6px 18px
         rgba(59, 130, 246, .2);
-
 }
 
 
@@ -226,23 +175,15 @@ body {
 ========================================== */
 
 .logout {
-
     margin-top: auto;
 
-    background:
-        #151B34 !important;
+    background: #151B34 !important;
 
-    color:
-        #F87171 !important;
-
+    color: #F87171 !important;
 }
 
-
 .logout:hover {
-
-    background:
-        #3B1720 !important;
-
+    background: #3B1720 !important;
 }
 
 
@@ -251,17 +192,15 @@ body {
 ========================================== */
 
 .main-area {
-
     flex: 1;
-
     min-width: 0;
 
     display: flex;
-
     flex-direction: column;
 
     background: #070B18;
 
+    overflow: hidden;
 }
 
 
@@ -270,9 +209,7 @@ body {
 ========================================== */
 
 .top-header {
-
     height: 72px;
-
     min-height: 72px;
 
     display: flex;
@@ -281,45 +218,36 @@ body {
 
     justify-content: space-between;
 
-    padding:
-        0 22px 0 25px;
+    padding: 0 22px 0 25px;
 
     background: #090D1F;
 
-    border-bottom:
-        1px solid #1B2340;
+    border-bottom: 1px solid #1B2340;
 
     position: relative;
 
     z-index: 1000;
-
 }
 
+.page-heading {
+    min-width: 0;
+}
 
 .page-heading h1 {
-
     font-size: 18px;
-
     color: #F8FAFC;
-
 }
 
-
 .page-heading p {
-
     font-size: 11px;
 
     color: #7F8BA8;
 
     margin-top: 2px;
-
 }
 
-
 #headerUsername {
-
     color: #A5B4FC;
-
 }
 
 
@@ -328,13 +256,13 @@ body {
 ========================================== */
 
 .header-actions {
-
     display: flex;
 
     align-items: center;
 
     gap: 14px;
 
+    flex-shrink: 0;
 }
 
 
@@ -343,17 +271,14 @@ body {
 ========================================== */
 
 .search-box {
-
     width: 245px;
-
     height: 38px;
 
     border-radius: 10px;
 
     background: #10152A;
 
-    border:
-        1px solid #252D49;
+    border: 1px solid #252D49;
 
     display: flex;
 
@@ -361,23 +286,15 @@ body {
 
     gap: 8px;
 
-    padding:
-        0 12px;
-
+    padding: 0 12px;
 }
-
 
 .search-box span {
-
     color: #7F8BA8;
-
     font-size: 20px;
-
 }
 
-
 .search-box input {
-
     width: 100%;
 
     background: transparent;
@@ -389,14 +306,10 @@ body {
     color: white;
 
     font-size: 12px;
-
 }
 
-
 .search-box input::placeholder {
-
     color: #66708A;
-
 }
 
 
@@ -405,9 +318,7 @@ body {
 ========================================== */
 
 .notification-area {
-
     position: relative;
-
 }
 
 
@@ -416,17 +327,14 @@ body {
 ========================================== */
 
 .notification-btn {
-
     position: relative;
 
     width: 40px;
-
     height: 40px;
 
     border-radius: 10px;
 
-    border:
-        1px solid #293252;
+    border: 1px solid #293252;
 
     background: #10152A;
 
@@ -437,16 +345,11 @@ body {
     font-size: 17px;
 
     transition: .2s;
-
 }
 
-
 .notification-btn:hover {
-
     background: #18213D;
-
     border-color: #3B82F6;
-
 }
 
 
@@ -455,19 +358,15 @@ body {
 ========================================== */
 
 .notification-count {
-
     position: absolute;
 
     top: -6px;
-
     right: -6px;
 
     min-width: 18px;
-
     height: 18px;
 
-    padding:
-        0 5px;
+    padding: 0 5px;
 
     border-radius: 20px;
 
@@ -475,8 +374,7 @@ body {
 
     color: white;
 
-    border:
-        2px solid #090D1F;
+    border: 2px solid #090D1F;
 
     font-size: 10px;
 
@@ -485,16 +383,11 @@ body {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
-
 }
 
-
 .notification-count.hidden {
-
     display: none;
-
 }
 
 
@@ -503,19 +396,16 @@ body {
 ========================================== */
 
 .profile-button {
-
     position: relative;
 
     width: 40px;
-
     height: 40px;
 
     min-width: 40px;
 
     border-radius: 50%;
 
-    border:
-        2px solid #293252;
+    border: 2px solid #293252;
 
     background:
         linear-gradient(
@@ -535,36 +425,23 @@ body {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     transition: .2s;
-
 }
 
-
 .profile-button:hover {
-
     border-color: #60A5FA;
 
-    transform:
-        scale(1.05);
+    transform: scale(1.05);
 
     box-shadow:
         0 6px 18px
         rgba(59, 130, 246, .25);
-
 }
 
-
-/* ==========================================
-   PROFILE IMAGE
-========================================== */
-
 .profile-button img {
-
     width: 100%;
-
     height: 100%;
 
     object-fit: cover;
@@ -572,30 +449,20 @@ body {
     border-radius: 50%;
 
     display: none;
-
 }
 
-
-/* ==========================================
-   PROFILE INITIAL
-========================================== */
-
 #headerProfileInitials {
-
     width: 100%;
-
     height: 100%;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     font-size: 17px;
 
     color: white;
-
 }
 
 
@@ -604,20 +471,18 @@ body {
 ========================================== */
 
 .content {
-
     flex: 1;
 
+    min-width: 0;
     min-height: 0;
 
     background: #070B18;
 
+    overflow: hidden;
 }
 
-
 .content iframe {
-
     width: 100%;
-
     height: 100%;
 
     border: none;
@@ -625,7 +490,6 @@ body {
     background: #070B18;
 
     display: block;
-
 }
 
 
@@ -634,19 +498,15 @@ body {
 ================================================== */
 
 .notification-overlay {
-
     position: fixed;
 
     inset: 0;
 
-    background:
-        rgba(0, 0, 0, .58);
+    background: rgba(0, 0, 0, .58);
 
-    backdrop-filter:
-        blur(5px);
+    backdrop-filter: blur(5px);
 
-    -webkit-backdrop-filter:
-        blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 
     opacity: 0;
 
@@ -657,16 +517,11 @@ body {
         visibility .3s ease;
 
     z-index: 8000;
-
 }
 
-
 .notification-overlay.show {
-
     opacity: 1;
-
     visibility: visible;
-
 }
 
 
@@ -675,21 +530,20 @@ body {
 ================================================== */
 
 .notification-panel {
-
     position: fixed;
 
     top: 0;
-
     right: 0;
 
     width: 430px;
+
+    max-width: 100%;
 
     height: 100vh;
 
     background: #0B1026;
 
-    border-left:
-        1px solid #293252;
+    border-left: 1px solid #293252;
 
     box-shadow:
         -20px 0 50px
@@ -701,21 +555,15 @@ body {
 
     flex-direction: column;
 
-    transform:
-        translateX(100%);
+    transform: translateX(100%);
 
     transition:
         transform .35s
         cubic-bezier(.4, 0, .2, 1);
-
 }
 
-
 .notification-panel.show {
-
-    transform:
-        translateX(0);
-
+    transform: translateX(0);
 }
 
 
@@ -724,7 +572,6 @@ body {
 ================================================== */
 
 .notification-header {
-
     min-height: 108px;
 
     padding: 24px;
@@ -735,42 +582,32 @@ body {
 
     justify-content: space-between;
 
-    border-bottom:
-        1px solid #242C48;
-
+    border-bottom: 1px solid #242C48;
 }
 
-
 .notification-header h2 {
-
     font-size: 20px;
 
     color: #F8FAFC;
 
     margin-bottom: 7px;
-
 }
 
-
 .notification-header p {
-
     font-size: 11px;
 
     color: #7F8BA8;
-
 }
 
-
 .notification-close {
-
     width: 36px;
-
     height: 36px;
+
+    flex-shrink: 0;
 
     border-radius: 10px;
 
-    border:
-        1px solid #293252;
+    border: 1px solid #293252;
 
     background: #151B34;
 
@@ -781,16 +618,11 @@ body {
     font-size: 18px;
 
     transition: .2s;
-
 }
 
-
 .notification-close:hover {
-
     background: #252D49;
-
     color: white;
-
 }
 
 
@@ -799,11 +631,9 @@ body {
 ================================================== */
 
 .notification-summary {
-
     min-height: 54px;
 
-    padding:
-        0 24px;
+    padding: 0 24px;
 
     display: flex;
 
@@ -811,23 +641,17 @@ body {
 
     justify-content: space-between;
 
-    border-bottom:
-        1px solid #242C48;
+    gap: 10px;
 
+    border-bottom: 1px solid #242C48;
 }
-
 
 .notification-summary span {
-
     color: #7F8BA8;
-
     font-size: 11px;
-
 }
 
-
 .mark-read-btn {
-
     border: none;
 
     background: transparent;
@@ -837,14 +661,10 @@ body {
     font-size: 11px;
 
     cursor: pointer;
-
 }
 
-
 .mark-read-btn:hover {
-
     color: white;
-
 }
 
 
@@ -853,36 +673,24 @@ body {
 ================================================== */
 
 .notification-list {
-
     flex: 1;
 
     overflow-y: auto;
 
     padding: 18px;
-
 }
-
 
 .notification-list::-webkit-scrollbar {
-
     width: 6px;
-
 }
-
 
 .notification-list::-webkit-scrollbar-track {
-
     background: transparent;
-
 }
 
-
 .notification-list::-webkit-scrollbar-thumb {
-
     background: #293252;
-
     border-radius: 10px;
-
 }
 
 
@@ -891,7 +699,6 @@ body {
 ================================================== */
 
 .notification-item {
-
     position: relative;
 
     padding: 18px;
@@ -902,62 +709,42 @@ body {
 
     background: #11182F;
 
-    border:
-        1px solid #252D49;
+    border: 1px solid #252D49;
 
     cursor: pointer;
 
     transition: .2s;
-
 }
 
-
 .notification-item:hover {
-
     background: #171E37;
 
     border-color: #3B82F6;
-
 }
-
 
 .notification-item.unread {
-
-    border-left:
-        3px solid #4F7CFF;
+    border-left: 3px solid #4F7CFF;
 
     background: #111D3D;
-
 }
 
-
 .notification-item.unread::after {
-
     content: "";
 
     position: absolute;
 
     top: 22px;
-
     right: 52px;
 
     width: 7px;
-
     height: 7px;
 
     border-radius: 50%;
 
     background: #60A5FA;
-
 }
 
-
-/* ==================================================
-   NOTIFICATION TEXT
-================================================== */
-
 .notification-item h4 {
-
     color: #F8FAFC;
 
     font-size: 14px;
@@ -965,23 +752,17 @@ body {
     margin-bottom: 7px;
 
     padding-right: 20px;
-
 }
 
-
 .notification-item p {
-
     color: #AAB4D0;
 
     font-size: 12px;
 
     line-height: 1.55;
-
 }
 
-
 .notification-item small {
-
     display: block;
 
     color: #66708A;
@@ -989,7 +770,6 @@ body {
     font-size: 10px;
 
     margin-top: 9px;
-
 }
 
 
@@ -998,16 +778,13 @@ body {
 ================================================== */
 
 .no-notifications {
-
-    padding:
-        50px 20px;
+    padding: 50px 20px;
 
     text-align: center;
 
     color: #7F8BA8;
 
     font-size: 13px;
-
 }
 
 
@@ -1016,17 +793,13 @@ body {
 ================================================== */
 
 .view-all-btn {
+    width: calc(100% - 36px);
 
-    width:
-        calc(100% - 36px);
-
-    margin:
-        0 18px 18px;
+    margin: 0 18px 18px;
 
     padding: 13px;
 
-    border:
-        1px solid #293252;
+    border: 1px solid #293252;
 
     border-radius: 10px;
 
@@ -1039,119 +812,26 @@ body {
     font-size: 12px;
 
     transition: .2s;
-
 }
 
-
 .view-all-btn:hover {
-
     background: #192341;
 
     border-color: #3B82F6;
-
 }
 
-
-/* ==================================================
-   RESPONSIVE
-================================================== */
-
-@media(max-width:800px) {
-
-    .sidebar {
-
-        width: 210px;
-
-    }
-
-
-    .search-box {
-
-        width: 180px;
-
-    }
-
-
-    .notification-panel {
-
-        width: 390px;
-
-    }
-
-}
-
-
-@media(max-width:650px) {
-
-    .sidebar {
-
-        width: 70px;
-
-        padding:
-            15px 8px;
-
-    }
-
-
-    .brand {
-
-        justify-content:
-            center;
-
-    }
-
-
-    .brand > div:last-child {
-
-        display: none;
-
-    }
-
-
-    .sidebar button span {
-
-        display: none;
-
-    }
-
-
-    .sidebar button {
-
-        justify-content:
-            center;
-
-    }
-
-
-    .search-box {
-
-        display: none;
-
-    }
-
-
-    .notification-panel {
-
-        width: 100%;
-
-    }
-
-}
 
 /* ==================================================
    DELETE NOTIFICATION BUTTON
 ================================================== */
 
 .delete-notification-btn {
-
     position: absolute;
 
     top: 12px;
-
     right: 12px;
 
     width: 30px;
-
     height: 30px;
 
     border: none;
@@ -1169,29 +849,220 @@ body {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     opacity: 0;
 
-    transition: 0.2s;
-
+    transition: .2s;
 }
 
-
-.notification-item:hover
-.delete-notification-btn {
-
+.notification-item:hover .delete-notification-btn {
     opacity: 1;
-
 }
-
 
 .delete-notification-btn:hover {
-
-    background:
-        rgba(239, 68, 68, 0.15);
+    background: rgba(239, 68, 68, .15);
 
     transform: scale(1.08);
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 210px;
+    }
+
+    .search-box {
+        width: 180px;
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 650px) {
+
+    .sidebar {
+        width: 62px;
+
+        padding: 12px 7px;
+    }
+
+    .brand {
+        padding: 0 0 18px;
+
+        margin-bottom: 16px;
+
+        justify-content: center;
+    }
+
+    .brand-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .brand > div:last-child {
+        display: none;
+    }
+
+    .sidebar-menu {
+        gap: 7px;
+    }
+
+    .sidebar button {
+        height: 48px;
+
+        padding: 0;
+
+        justify-content: center;
+
+        font-size: 18px;
+
+        gap: 0;
+    }
+
+    .sidebar button span {
+        display: none;
+    }
+
+    .sidebar .menu-icon {
+        display: inline !important;
+    }
+
+    .logout {
+        min-height: 48px;
+    }
+
+
+    /* HEADER */
+
+    .top-header {
+        height: 68px;
+        min-height: 68px;
+
+        padding: 0 12px 0 14px;
+    }
+
+    .page-heading h1 {
+        font-size: 16px;
+    }
+
+    .page-heading p {
+        font-size: 10px;
+
+        max-width: 145px;
+
+        white-space: nowrap;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+    }
+
+    .search-box {
+        display: none;
+    }
+
+    .header-actions {
+        gap: 8px;
+    }
+
+    .notification-btn {
+        width: 38px;
+        height: 38px;
+
+        font-size: 16px;
+    }
+
+    .profile-button {
+        width: 38px;
+        height: 38px;
+
+        min-width: 38px;
+    }
+
+
+    /* CONTENT */
+
+    .content {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .content iframe {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* NOTIFICATIONS */
+
+    .notification-panel {
+        width: 100%;
+    }
+
+    .notification-header {
+        min-height: 95px;
+
+        padding: 20px;
+    }
+
+    .notification-summary {
+        padding: 0 20px;
+    }
+
+    .notification-list {
+        padding: 14px;
+    }
+
+    .delete-notification-btn {
+        opacity: 1;
+    }
+
+}
+
+
+/* ==================================================
+   VERY SMALL MOBILE
+================================================== */
+
+@media (max-width: 380px) {
+
+    .sidebar {
+        width: 56px;
+
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .brand-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .top-header {
+        padding-left: 10px;
+        padding-right: 8px;
+    }
+
+    .page-heading h1 {
+        font-size: 14px;
+    }
+
+    .page-heading p {
+        max-width: 110px;
+    }
+
+    .header-actions {
+        gap: 6px;
+    }
 
 }
