@@ -15,7 +15,7 @@
     } else {
 
         window.SWIPEX_API_URL =
-            "https://swipe-x-deployment.vercel.app/";
+            "https://swipe-x-deployment.vercel.app";
 
     }
 
