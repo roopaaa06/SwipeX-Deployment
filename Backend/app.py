@@ -114,12 +114,6 @@ os.makedirs(
     exist_ok=True
 )
 
-os.makedirs(
-    UPLOAD_FOLDER,
-    exist_ok=True
-)
-
-
 # =========================================================
 # DATABASE DEPENDENCY
 # =========================================================
