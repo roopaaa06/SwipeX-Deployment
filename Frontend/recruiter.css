@@ -3,28 +3,20 @@
 ===================================================== */
 
 * {
-
     margin: 0;
-
     padding: 0;
-
     box-sizing: border-box;
-
 }
 
 
 html,
 body {
-
     width: 100%;
-
-    min-height: 100%;
-
+    height: 100%;
 }
 
 
 body {
-
     font-family:
         "Segoe UI",
         Arial,
@@ -34,10 +26,8 @@ body {
 
     color: #f5f7ff;
 
-    overflow-x: hidden;
-
+    overflow: hidden;
 }
-
 
 
 /* =====================================================
@@ -45,15 +35,12 @@ body {
 ===================================================== */
 
 .sidebar {
-
     position: fixed;
 
     top: 0;
-
     left: 0;
 
     width: 265px;
-
     height: 100vh;
 
     background: #0c112d;
@@ -62,15 +49,15 @@ body {
         1px solid #1d2446;
 
     display: flex;
-
     flex-direction: column;
 
     padding: 28px 15px;
 
     z-index: 1000;
 
+    overflow-y: auto;
+    overflow-x: hidden;
 }
-
 
 
 /* =====================================================
@@ -78,7 +65,6 @@ body {
 ===================================================== */
 
 .logo-section {
-
     display: flex;
 
     align-items: center;
@@ -90,22 +76,20 @@ body {
 
     border-bottom:
         1px solid #202747;
-
 }
 
 
 .logo-icon {
-
     width: 43px;
-
     height: 43px;
+
+    min-width: 43px;
 
     border-radius: 11px;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     font-size: 22px;
@@ -120,21 +104,17 @@ body {
     box-shadow:
         0 8px 20px
         rgba(34, 125, 255, 0.25);
-
 }
 
 
 .logo-text h2 {
-
     font-size: 20px;
 
     font-weight: 800;
-
 }
 
 
 .logo-text span {
-
     display: block;
 
     margin-top: 2px;
@@ -146,9 +126,7 @@ body {
     font-weight: 700;
 
     letter-spacing: 1px;
-
 }
-
 
 
 /* =====================================================
@@ -156,24 +134,19 @@ body {
 ===================================================== */
 
 .sidebar-menu {
-
     margin-top: 25px;
 
     display: flex;
-
     flex-direction: column;
 
     gap: 7px;
-
 }
 
 
 .menu-item {
-
     position: relative;
 
     width: 100%;
-
     height: 48px;
 
     border: none;
@@ -201,22 +174,18 @@ body {
 
     transition:
         all 0.25s ease;
-
 }
 
 
 .menu-item:hover {
-
     color: white;
 
     background:
         rgba(104, 79, 210, 0.18);
-
 }
 
 
 .menu-item.active {
-
     color: white;
 
     background:
@@ -229,27 +198,22 @@ body {
     box-shadow:
         0 10px 25px
         rgba(44, 126, 255, 0.23);
-
 }
 
 
 .menu-icon {
-
     width: 22px;
 
     text-align: center;
 
     font-size: 17px;
-
 }
 
 
 .sidebar-badge {
-
     margin-left: auto;
 
     min-width: 20px;
-
     height: 20px;
 
     padding:
@@ -266,11 +230,8 @@ body {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
-
 }
-
 
 
 /* =====================================================
@@ -278,11 +239,9 @@ body {
 ===================================================== */
 
 .logout-button {
-
     margin-top: auto;
 
     width: 100%;
-
     height: 48px;
 
     border: none;
@@ -306,17 +265,13 @@ body {
     font-size: 14px;
 
     cursor: pointer;
-
 }
 
 
 .logout-button:hover {
-
     background:
         rgba(255, 60, 90, 0.12);
-
 }
-
 
 
 /* =====================================================
@@ -324,15 +279,23 @@ body {
 ===================================================== */
 
 .main-content {
-
     margin-left: 265px;
 
-    min-height: 100vh;
+    width:
+        calc(100% - 265px);
+
+    height: 100vh;
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
 
     background: #080b20;
 
+    overflow: hidden;
 }
-
 
 
 /* =====================================================
@@ -340,8 +303,8 @@ body {
 ===================================================== */
 
 .topbar {
-
     height: 82px;
+    min-height: 82px;
 
     padding:
         0 30px;
@@ -355,35 +318,34 @@ body {
 
     justify-content: space-between;
 
+    background: #080b20;
+}
+
+
+.topbar-left {
+    min-width: 0;
 }
 
 
 .topbar-left h1 {
-
     font-size: 20px;
 
     font-weight: 800;
-
 }
 
 
 .topbar-left p {
-
     margin-top: 5px;
 
     color: #7d89b1;
 
     font-size: 12px;
-
 }
 
 
 #welcomeName {
-
     color: #b8c3e8;
-
 }
-
 
 
 /* =====================================================
@@ -391,15 +353,14 @@ body {
 ===================================================== */
 
 .topbar-right {
-
     display: flex;
 
     align-items: center;
 
     gap: 14px;
 
+    flex-shrink: 0;
 }
-
 
 
 /* =====================================================
@@ -407,11 +368,9 @@ body {
 ===================================================== */
 
 .top-notification {
-
     position: relative;
 
     width: 46px;
-
     height: 46px;
 
     border-radius: 12px;
@@ -429,29 +388,23 @@ body {
 
     transition:
         0.2s ease;
-
 }
 
 
 .top-notification:hover {
-
     background: #18203d;
 
     border-color: #405084;
-
 }
 
 
 .top-notification-badge {
-
     position: absolute;
 
     top: -5px;
-
     right: -5px;
 
     min-width: 19px;
-
     height: 19px;
 
     padding:
@@ -470,14 +423,11 @@ body {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     border:
         2px solid #080b20;
-
 }
-
 
 
 /* =====================================================
@@ -485,12 +435,12 @@ body {
 ===================================================== */
 
 .top-profile {
-
     position: relative;
 
     width: 46px;
-
     height: 46px;
+
+    min-width: 46px;
 
     border-radius: 50%;
 
@@ -508,17 +458,14 @@ body {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     transition:
         0.2s ease;
-
 }
 
 
 .top-profile:hover {
-
     transform:
         scale(1.05);
 
@@ -528,14 +475,11 @@ body {
     box-shadow:
         0 0 15px
         rgba(59, 130, 246, 0.35);
-
 }
 
 
 .top-profile img {
-
     width: 100%;
-
     height: 100%;
 
     object-fit: cover;
@@ -543,22 +487,20 @@ body {
     border-radius: 50%;
 
     display: none;
-
 }
 
 
 #topProfileInitial {
+    width: 100%;
+    height: 100%;
 
     font-size: 20px;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
-
 }
-
 
 
 /* =====================================================
@@ -566,33 +508,31 @@ body {
 ===================================================== */
 
 .content-panel {
+    flex: 1;
 
     width: 100%;
 
-    height:
-        calc(100vh - 82px);
+    min-width: 0;
+    min-height: 0;
 
     background: #080b20;
 
     overflow: hidden;
-
 }
 
 
 .content-panel iframe {
-
     width: 100%;
-
     height: 100%;
+
+    max-width: 100%;
 
     border: none;
 
     display: block;
 
     background: #080b20;
-
 }
-
 
 
 /* =====================================================
@@ -600,7 +540,6 @@ body {
 ===================================================== */
 
 .notification-overlay {
-
     position: fixed;
 
     inset: 0;
@@ -619,18 +558,14 @@ body {
         0.25s ease;
 
     z-index: 1500;
-
 }
 
 
 .notification-overlay.show {
-
     opacity: 1;
 
     visibility: visible;
-
 }
-
 
 
 /* =====================================================
@@ -638,14 +573,14 @@ body {
 ===================================================== */
 
 .notification-panel {
-
     position: fixed;
 
     top: 0;
-
     right: 0;
 
     width: 420px;
+
+    max-width: 100%;
 
     height: 100vh;
 
@@ -669,17 +604,13 @@ body {
     display: flex;
 
     flex-direction: column;
-
 }
 
 
 .notification-panel.open {
-
     transform:
         translateX(0);
-
 }
-
 
 
 /* =====================================================
@@ -687,7 +618,6 @@ body {
 ===================================================== */
 
 .notification-panel-header {
-
     padding:
         27px 25px 22px;
 
@@ -700,18 +630,16 @@ body {
 
     justify-content: space-between;
 
+    gap: 15px;
 }
 
 
 .notification-panel-header h2 {
-
     font-size: 20px;
-
 }
 
 
 .notification-panel-header p {
-
     margin-top: 6px;
 
     color: #7e8bb3;
@@ -719,15 +647,14 @@ body {
     font-size: 12px;
 
     line-height: 1.5;
-
 }
 
 
 .close-notifications {
-
     width: 34px;
-
     height: 34px;
+
+    min-width: 34px;
 
     border: none;
 
@@ -740,18 +667,14 @@ body {
     font-size: 17px;
 
     cursor: pointer;
-
 }
 
 
 .close-notifications:hover {
-
     background: #222c4e;
 
     color: white;
-
 }
-
 
 
 /* =====================================================
@@ -759,7 +682,6 @@ body {
 ===================================================== */
 
 .notification-actions {
-
     padding:
         14px 25px;
 
@@ -769,23 +691,21 @@ body {
 
     align-items: center;
 
+    gap: 12px;
+
     border-bottom:
         1px solid #202844;
-
 }
 
 
 .notification-actions span {
-
     color: #7f8cb4;
 
     font-size: 12px;
-
 }
 
 
 .notification-actions button {
-
     border: none;
 
     background: transparent;
@@ -795,16 +715,12 @@ body {
     font-size: 12px;
 
     cursor: pointer;
-
 }
 
 
 .notification-actions button:hover {
-
     color: #82bbff;
-
 }
-
 
 
 /* =====================================================
@@ -812,15 +728,12 @@ body {
 ===================================================== */
 
 .notification-list {
-
     padding: 18px;
 
     overflow-y: auto;
 
     flex: 1;
-
 }
-
 
 
 /* =====================================================
@@ -828,7 +741,6 @@ body {
 ===================================================== */
 
 .notification-card {
-
     position: relative;
 
     display: flex;
@@ -850,28 +762,22 @@ body {
 
     transition:
         0.2s ease;
-
 }
 
 
 .notification-card:hover {
-
     background: #151e38;
 
     border-color: #34436f;
-
 }
 
 
 .notification-card.unread {
-
     border-left:
         3px solid #5d7fff;
 
     background: #121a34;
-
 }
-
 
 
 /* =====================================================
@@ -879,11 +785,9 @@ body {
 ===================================================== */
 
 .notification-card-icon {
-
     flex-shrink: 0;
 
     width: 42px;
-
     height: 42px;
 
     border-radius: 11px;
@@ -891,37 +795,28 @@ body {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     font-size: 18px;
-
 }
 
 
 .notification-card-icon.purple {
-
     background:
         rgba(123, 76, 242, 0.17);
-
 }
 
 
 .notification-card-icon.blue {
-
     background:
         rgba(41, 144, 255, 0.17);
-
 }
 
 
 .notification-card-icon.orange {
-
     background:
         rgba(255, 151, 49, 0.17);
-
 }
-
 
 
 /* =====================================================
@@ -929,14 +824,13 @@ body {
 ===================================================== */
 
 .notification-card-content {
-
     flex: 1;
 
+    min-width: 0;
 }
 
 
 .notification-card-title {
-
     display: flex;
 
     justify-content: space-between;
@@ -944,19 +838,17 @@ body {
     align-items: center;
 
     gap: 10px;
-
 }
 
 
 .notification-card-title strong {
-
     font-size: 14px;
 
+    overflow-wrap: anywhere;
 }
 
 
 .notification-card-content p {
-
     margin-top: 7px;
 
     color: #a1acd0;
@@ -965,11 +857,11 @@ body {
 
     line-height: 1.55;
 
+    overflow-wrap: anywhere;
 }
 
 
 .notification-time {
-
     display: block;
 
     margin-top: 9px;
@@ -977,14 +869,11 @@ body {
     color: #667399;
 
     font-size: 10px;
-
 }
 
 
 .notification-dot {
-
     width: 7px;
-
     height: 7px;
 
     border-radius: 50%;
@@ -992,9 +881,7 @@ body {
     background: #4d9dff;
 
     flex-shrink: 0;
-
 }
-
 
 
 /* =====================================================
@@ -1002,7 +889,6 @@ body {
 ===================================================== */
 
 .notification-empty {
-
     text-align: center;
 
     padding: 40px 15px;
@@ -1010,74 +896,379 @@ body {
     color: #7f8cb4;
 
     font-size: 13px;
-
 }
-
 
 
 /* =====================================================
-   RESPONSIVE
+   TABLET
 ===================================================== */
 
-@media(max-width:900px) {
+@media(max-width: 900px) {
 
     .sidebar {
-
         width: 220px;
-
     }
 
 
     .main-content {
-
         margin-left: 220px;
 
+        width:
+            calc(100% - 220px);
     }
 
 }
 
 
-@media(max-width:650px) {
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width: 650px) {
+
+    /* =====================================
+       SMALL FIXED SIDEBAR
+    ===================================== */
 
     .sidebar {
+        position: fixed;
 
-        position: relative;
+        top: 0;
+        left: 0;
 
-        width: 100%;
+        width: 62px;
+        height: 100vh;
 
-        height: auto;
+        padding:
+            12px 7px;
 
+        border-right:
+            1px solid #1d2446;
     }
 
+
+    /* =====================================
+       SMALL LOGO
+    ===================================== */
+
+    .logo-section {
+        justify-content: center;
+
+        padding:
+            0 0 18px;
+
+        margin-bottom: 16px;
+    }
+
+
+    .logo-icon {
+        width: 42px;
+        height: 42px;
+
+        min-width: 42px;
+
+        font-size: 20px;
+    }
+
+
+    .logo-text {
+        display: none;
+    }
+
+
+    /* =====================================
+       MENU ICONS ONLY
+    ===================================== */
 
     .sidebar-menu {
+        margin-top: 0;
 
-        display: grid;
+        display: flex;
 
-        grid-template-columns:
-            repeat(2, 1fr);
+        flex-direction: column;
 
+        gap: 7px;
     }
 
 
+    .menu-item {
+        width: 100%;
+        height: 48px;
+
+        padding: 0;
+
+        justify-content: center;
+
+        gap: 0;
+
+        font-size: 18px;
+    }
+
+
+    .menu-item > span:not(.menu-icon):not(.sidebar-badge) {
+        display: none;
+    }
+
+
+    .menu-icon {
+        width: auto;
+
+        font-size: 18px;
+    }
+
+
+    /* =====================================
+       APPLICANT BADGE
+    ===================================== */
+
+    .sidebar-badge {
+        position: absolute;
+
+        top: 3px;
+        right: 1px;
+
+        margin-left: 0;
+
+        min-width: 17px;
+        height: 17px;
+
+        padding:
+            0 4px;
+
+        font-size: 9px;
+
+        border:
+            2px solid #0c112d;
+    }
+
+
+    /* =====================================
+       LOGOUT
+    ===================================== */
+
     .logout-button {
+        width: 100%;
+        height: 48px;
 
-        margin-top: 20px;
+        padding: 0;
 
+        justify-content: center;
+
+        gap: 0;
+    }
+
+
+    .logout-button > span:last-child {
+        display: none;
+    }
+
+
+    .logout-button .menu-icon {
+        display: inline;
+    }
+
+
+    /* =====================================
+       MAIN
+    ===================================== */
+
+    .main-content {
+        margin-left: 62px;
+
+        width:
+            calc(100% - 62px);
+
+        height: 100vh;
+    }
+
+
+    /* =====================================
+       TOPBAR
+    ===================================== */
+
+    .topbar {
+        height: 68px;
+        min-height: 68px;
+
+        padding:
+            0 12px 0 14px;
+    }
+
+
+    .topbar-left h1 {
+        font-size: 16px;
+    }
+
+
+    .topbar-left p {
+        font-size: 10px;
+
+        max-width: 145px;
+
+        white-space: nowrap;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+    }
+
+
+    .topbar-right {
+        gap: 8px;
+    }
+
+
+    .top-notification {
+        width: 38px;
+        height: 38px;
+
+        font-size: 16px;
+
+        border-radius: 10px;
+    }
+
+
+    .top-profile {
+        width: 38px;
+        height: 38px;
+
+        min-width: 38px;
+    }
+
+
+    #topProfileInitial {
+        font-size: 16px;
+    }
+
+
+    /* =====================================
+       CONTENT
+    ===================================== */
+
+    .content-panel {
+        width: 100%;
+
+        min-width: 0;
+
+        overflow: hidden;
+    }
+
+
+    .content-panel iframe {
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+
+    /* =====================================
+       NOTIFICATIONS
+    ===================================== */
+
+    .notification-panel {
+        width: 100%;
+    }
+
+
+    .notification-panel-header {
+        padding:
+            22px 20px 18px;
+    }
+
+
+    .notification-panel-header h2 {
+        font-size: 18px;
+    }
+
+
+    .notification-actions {
+        padding:
+            13px 20px;
+    }
+
+
+    .notification-list {
+        padding: 14px;
+    }
+
+
+    .notification-card {
+        padding: 14px;
+    }
+
+
+    .notification-card-icon {
+        width: 38px;
+        height: 38px;
+
+        font-size: 16px;
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media(max-width: 380px) {
+
+    .sidebar {
+        width: 56px;
+
+        padding-left: 5px;
+        padding-right: 5px;
     }
 
 
     .main-content {
+        margin-left: 56px;
 
-        margin-left: 0;
-
+        width:
+            calc(100% - 56px);
     }
 
 
-    .notification-panel {
+    .logo-icon {
+        width: 40px;
+        height: 40px;
 
-        width: 100%;
+        min-width: 40px;
+    }
 
+
+    .topbar {
+        padding:
+            0 8px 0 10px;
+    }
+
+
+    .topbar-left h1 {
+        font-size: 14px;
+    }
+
+
+    .topbar-left p {
+        max-width: 105px;
+    }
+
+
+    .topbar-right {
+        gap: 6px;
+    }
+
+
+    .top-notification {
+        width: 36px;
+        height: 36px;
+    }
+
+
+    .top-profile {
+        width: 36px;
+        height: 36px;
+
+        min-width: 36px;
     }
 
 }
