@@ -1,72 +1,104 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:"Segoe UI",sans-serif;
+/* ==========================================
+   RESET
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
 }
 
-body{
-    background:#0B1020;
-    color:white;
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100%;
 }
 
-.page{
-    width:100%;
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    padding:40px;
+body {
+    background: #0B1020;
+    color: white;
+    overflow-x: hidden;
 }
+
+
+/* ==========================================
+   PAGE
+========================================== */
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 40px 24px;
+}
+
 
 /* ==========================================
    NAVBAR
 ========================================== */
 
-.navbar{
-    width:100%;
-    max-width:900px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    margin-bottom:40px;
-    position:relative;
+.navbar {
+    width: 100%;
+    max-width: 900px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 40px;
+
+    position: relative;
 }
 
-.navbar h2{
-    font-size:34px;
+.navbar h2 {
+    font-size: 34px;
+    text-align: center;
 }
 
-/* Dashboard button moved to LEFT */
+.navbar button {
+    position: absolute;
 
-.navbar button{
-    position:absolute;
-    left:0;
-    top:50%;
-    transform:translateY(-50%);
+    left: 0;
+    top: 50%;
 
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
+    transform: translateY(-50%);
 
-    background:#3B82F6;
-    color:white;
+    display: inline-flex;
+    align-items: center;
 
-    border:none;
-    padding:10px 18px;
+    gap: 8px;
 
-    border-radius:10px;
+    background: #3B82F6;
 
-    cursor:pointer;
-    font-size:15px;
-    font-weight:600;
+    color: white;
 
-    transition:0.2s ease;
+    border: none;
+
+    padding: 10px 18px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition: .2s ease;
 }
 
-.navbar button:hover{
-    background:#2563EB;
-    transform:translateY(-50%) translateX(-2px);
+.navbar button:hover {
+    background: #2563EB;
+
+    transform:
+        translateY(-50%)
+        translateX(-2px);
 }
 
 
@@ -74,39 +106,60 @@ body{
    FILTERS
 ========================================== */
 
-.filters{
-    width:100%;
-    max-width:900px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:12px;
-    margin-bottom:30px;
-    flex-wrap:wrap;
+.filters {
+    width: 100%;
+    max-width: 900px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 30px;
+
+    flex-wrap: wrap;
 }
 
 .filters input,
-.filters select{
-    width:220px;
-    padding:12px;
-    background:#181B2E;
-    color:white;
-    border:1px solid #2F3550;
-    border-radius:10px;
-    font-size:15px;
+.filters select {
+    width: 220px;
+
+    max-width: 100%;
+
+    padding: 12px;
+
+    background: #181B2E;
+
+    color: white;
+
+    border: 1px solid #2F3550;
+
+    border-radius: 10px;
+
+    font-size: 15px;
 }
 
-.filters button{
-    padding:12px 24px;
-    background:#2563EB;
-    color:white;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
+.filters input::placeholder {
+    color: #9CA3AF;
 }
 
-.filters button:hover{
-    background:#1D4ED8;
+.filters button {
+    padding: 12px 24px;
+
+    background: #2563EB;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.filters button:hover {
+    background: #1D4ED8;
 }
 
 
@@ -114,46 +167,93 @@ body{
    JOB CARD
 ========================================== */
 
-.job-card{
-    width:480px;
-    background:#181B2E;
-    border-radius:25px;
-    padding:25px;
-    box-shadow:0 20px 50px rgba(0,0,0,.45);
-    border-top:5px solid orange;
-    transition:.3s;
+.job-card {
+    width: 100%;
+
+    max-width: 480px;
+
+    min-width: 0;
+
+    background: #181B2E;
+
+    border-radius: 25px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, .45);
+
+    border-top: 5px solid orange;
+
+    transition: .4s ease;
+
+    cursor: grab;
+
+    user-select: none;
+
+    overflow: hidden;
 }
 
-.job-card:hover{
-    transform:translateY(-5px);
+.job-card:hover {
+    transform: translateY(-5px);
 }
 
-.top{
-    display:flex;
-    gap:18px;
-    align-items:center;
+.job-card:active {
+    cursor: grabbing;
 }
 
-.logo{
-    width:65px;
-    height:65px;
-    background:#2563EB;
-    border-radius:15px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:28px;
-    font-weight:bold;
+
+/* ==========================================
+   TOP
+========================================== */
+
+.top {
+    display: flex;
+
+    gap: 18px;
+
+    align-items: center;
+
+    min-width: 0;
 }
 
-.top h2{
-    color:white;
+.top > div:last-child {
+    min-width: 0;
 }
 
-.top h3{
-    color:#BBBBBB;
-    font-size:17px;
-    margin-top:5px;
+.logo {
+    width: 65px;
+    height: 65px;
+
+    min-width: 65px;
+
+    background: #2563EB;
+
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 28px;
+
+    font-weight: bold;
+}
+
+.top h2 {
+    color: white;
+    overflow-wrap: anywhere;
+}
+
+.top h3 {
+    color: #BBBBBB;
+
+    font-size: 17px;
+
+    margin-top: 5px;
+
+    overflow-wrap: anywhere;
 }
 
 
@@ -161,19 +261,30 @@ body{
    TAGS
 ========================================== */
 
-.tags{
-    display:flex;
-    gap:10px;
-    margin:25px 0;
-    flex-wrap:wrap;
+.tags {
+    display: flex;
+
+    gap: 10px;
+
+    margin: 25px 0;
+
+    flex-wrap: wrap;
 }
 
-.tags span{
-    background:#252942;
-    padding:8px 15px;
-    border-radius:30px;
-    color:#ddd;
-    font-size:13px;
+.tags span {
+    background: #252942;
+
+    padding: 8px 15px;
+
+    border-radius: 30px;
+
+    color: #DDD;
+
+    font-size: 13px;
+
+    max-width: 100%;
+
+    overflow-wrap: anywhere;
 }
 
 
@@ -181,10 +292,18 @@ body{
    DESCRIPTION
 ========================================== */
 
-#description{
-    color:#CFCFCF;
-    line-height:1.8;
-    margin-bottom:25px;
+#description {
+    width: 100%;
+
+    color: #CFCFCF;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+
+    overflow-wrap: anywhere;
+
+    word-break: break-word;
 }
 
 
@@ -192,203 +311,30 @@ body{
    SKILLS
 ========================================== */
 
-.skills{
-    display:flex;
-    gap:10px;
-    flex-wrap:wrap;
-    margin:15px 0 25px;
+.skills {
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin: 15px 0 25px;
 }
 
-.skills span{
-    background:#4F46E5;
-    color:white;
-    padding:8px 14px;
-    border-radius:8px;
-    font-size:13px;
-}
+.skills span {
+    background: #4F46E5;
 
+    color: white;
 
-/* ==========================================
-   BOTTOM
-========================================== */
+    padding: 8px 14px;
 
-.bottom{
-    display:flex;
-    justify-content:space-between;
-    border-top:1px solid rgba(255,255,255,0.07);
-    padding-top:20px;
-}
+    border-radius: 8px;
 
-.bottom p{
-    color:#999;
-    margin-bottom:8px;
-}
+    font-size: 13px;
 
+    max-width: 100%;
 
-/* ==========================================
-   ACTION BUTTONS
-========================================== */
-
-.actions{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    margin-top:30px;
-
-    position:relative;
-    z-index:10;
-}
-
-.actions button{
-    width:70px;
-    height:70px;
-    border-radius:50%;
-    border:none;
-    font-size:28px;
-    cursor:pointer;
-    transition:.3s;
-
-    position:relative;
-    z-index:11;
-}
-
-.skip{
-    background:#2A1E2B;
-    color:#FF4D6D;
-}
-
-.save{
-    background:#2C2938;
-    color:#FFD54F;
-}
-
-.apply{
-    background:#16312A;
-    color:#00E676;
-}
-
-.actions button:hover{
-    transform:scale(1.15);
-    box-shadow:0 0 20px rgba(255,255,255,.25);
-}
-
-
-/* ==========================================
-   SWIPE ANIMATIONS
-========================================== */
-
-.swipe-left{
-    transform:translateX(-700px) rotate(-20deg);
-    opacity:0;
-    transition:0.5s;
-}
-
-.swipe-right{
-    transform:translateX(700px) rotate(20deg);
-    opacity:0;
-    transition:0.5s;
-}
-
-.job-card{
-    transition:0.4s ease;
-    cursor:grab;
-    user-select:none;
-}
-
-.job-card:active{
-    cursor:grabbing;
-}
-
-.save-btn:hover{
-    transform:scale(1.12);
-    box-shadow:0 0 18px gold;
-}
-
-
-/* ==========================================
-   JOB INDICATORS
-========================================== */
-
-.job-indicators{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:10px;
-    flex-wrap:wrap;
-    margin-top:18px;
-    padding-top:15px;
-    border-top:1px solid rgba(255,255,255,0.06);
-    color:#AEB5C7;
-    font-size:13px;
-}
-
-#applicantCount{
-    color:#AEB5C7;
-}
-
-#earlyApplicant{
-    color:#00E676;
-    font-weight:600;
-}
-
-#postedTime{
-    color:#BBBBBB;
-}
-
-.job-stats{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    border-top:1px solid rgba(255,255,255,0.06);
-    padding-top:15px;
-    margin-top:15px;
-    color:#BBBBBB;
-    font-size:13px;
-}
-
-.job-stats span{
-    white-space:nowrap;
-}
-
-#earlyApplicant{
-    color:#00E676;
-}
-
-.job-meta{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    padding-top:12px;
-
-    color:#B8B8C8;
-
-    font-size:13px;
-
-    gap:15px;
-}
-
-.job-meta span{
-    white-space:nowrap;
-}
-
-#earlyApplicant{
-    color:#00E676;
-}
-
-#recentlyPosted{
-    color:#BBBBBB;
-}
-
-
-/* ==========================================
-   SEPARATOR
-========================================== */
-
-hr{
-    border:none;
-    border-top:1px solid rgba(255,255,255,0.06);
-    margin:0;
+    overflow-wrap: anywhere;
 }
 
 
@@ -396,21 +342,278 @@ hr{
    COMPATIBILITY
 ========================================== */
 
-.compatibility-box{
-    background:#20243A;
-    border-radius:12px;
-    padding:15px;
-    margin:20px 0;
+.compatibility-box {
+    width: 100%;
+
+    background: #20243A;
+
+    border-radius: 12px;
+
+    padding: 15px;
+
+    margin: 20px 0;
+
+    overflow: hidden;
 }
 
-.compatibility-box h4{
-    margin-bottom:10px;
+.compatibility-box h4 {
+    margin-bottom: 10px;
 }
 
-.compatibility-box p{
-    color:#CCCCCC;
-    margin:6px 0;
-    line-height:1.5;
+.compatibility-box p {
+    color: #CCCCCC;
+
+    margin: 6px 0;
+
+    line-height: 1.5;
+
+    overflow-wrap: anywhere;
+
+    word-break: break-word;
+}
+
+
+/* ==========================================
+   BOTTOM
+========================================== */
+
+.bottom {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, .07);
+
+    padding-top: 20px;
+}
+
+.bottom > div {
+    min-width: 0;
+}
+
+.bottom p {
+    color: #999;
+
+    margin-bottom: 8px;
+}
+
+.bottom h3 {
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   JOB META
+========================================== */
+
+.job-meta {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 0;
+
+    color: #B8B8C8;
+
+    font-size: 13px;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.job-meta span {
+    white-space: normal;
+
+    overflow-wrap: anywhere;
+}
+
+#applicantCount {
+    color: #AEB5C7;
+}
+
+#earlyApplicant {
+    color: #00E676;
+
+    font-weight: 600;
+}
+
+#recentlyPosted {
+    color: #BBBBBB;
+}
+
+
+/* ==========================================
+   JOB INDICATORS
+========================================== */
+
+.job-indicators {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin-top: 18px;
+
+    padding-top: 15px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, .06);
+
+    color: #AEB5C7;
+
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   JOB STATS
+========================================== */
+
+.job-stats {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, .06);
+
+    padding-top: 15px;
+
+    margin-top: 15px;
+
+    color: #BBBBBB;
+
+    font-size: 13px;
+}
+
+.job-stats span {
+    white-space: normal;
+}
+
+
+/* ==========================================
+   SEPARATOR
+========================================== */
+
+hr {
+    width: 100%;
+
+    border: none;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, .06);
+
+    margin: 0;
+}
+
+
+/* ==========================================
+   ACTION BUTTONS
+========================================== */
+
+.actions {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    margin-top: 30px;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+.actions button {
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    position: relative;
+
+    z-index: 11;
+}
+
+.skip {
+    background: #2A1E2B;
+    color: #FF4D6D;
+}
+
+.save-btn {
+    background: #2C2938;
+    color: #FFD54F;
+}
+
+.apply {
+    background: #16312A;
+    color: #00E676;
+}
+
+.actions button:hover {
+    transform: scale(1.15);
+
+    box-shadow:
+        0 0 20px
+        rgba(255, 255, 255, .25);
+}
+
+.save-btn:hover {
+    transform: scale(1.12);
+
+    box-shadow: 0 0 18px gold;
+}
+
+
+/* ==========================================
+   SWIPE ANIMATIONS
+========================================== */
+
+.swipe-left {
+    transform:
+        translateX(-700px)
+        rotate(-20deg);
+
+    opacity: 0;
+
+    transition: .5s;
+}
+
+.swipe-right {
+    transform:
+        translateX(700px)
+        rotate(20deg);
+
+    opacity: 0;
+
+    transition: .5s;
 }
 
 
@@ -418,27 +621,438 @@ hr{
    BACK DASHBOARD BUTTON
 ========================================== */
 
-.back-dashboard-btn{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    padding:10px 18px;
-    margin-bottom:20px;
+.back-dashboard-btn {
+    display: inline-flex;
+    align-items: center;
 
-    border:none;
-    border-radius:8px;
+    gap: 8px;
 
-    background:#f1f5f9;
-    color:#1e293b;
+    padding: 10px 18px;
 
-    font-size:15px;
-    font-weight:600;
+    margin-bottom: 20px;
 
-    cursor:pointer;
-    transition:0.2s ease;
+    border: none;
+
+    border-radius: 8px;
+
+    background: #F1F5F9;
+
+    color: #1E293B;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .2s ease;
 }
 
-.back-dashboard-btn:hover{
-    background:#e2e8f0;
-    transform:translateX(-2px);
+.back-dashboard-btn:hover {
+    background: #E2E8F0;
+
+    transform: translateX(-2px);
+}
+
+
+/* ==================================================
+   TABLET / NARROW IFRAME
+================================================== */
+
+@media (max-width: 700px) {
+
+    .page {
+        padding: 28px 18px;
+    }
+
+    .navbar {
+        margin-bottom: 25px;
+    }
+
+    .navbar h2 {
+        font-size: 28px;
+    }
+
+    .navbar button {
+        padding: 9px 13px;
+        font-size: 13px;
+    }
+
+    .filters {
+        gap: 10px;
+    }
+
+    .filters input,
+    .filters select {
+        flex: 1 1 180px;
+        width: auto;
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 500px) {
+
+    .page {
+        padding: 18px 8px 32px;
+    }
+
+
+    /* ======================================
+       NAVBAR
+    ====================================== */
+
+    .navbar {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 12px;
+
+        margin-bottom: 18px;
+    }
+
+    .navbar h2 {
+        order: 1;
+
+        font-size: 22px;
+
+        text-align: left;
+    }
+
+    .navbar button {
+        display: none;
+    }
+
+
+    /* ======================================
+       FILTERS
+    ====================================== */
+
+    .filters {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        width: 94%;
+
+        max-width: 360px;
+
+        gap: 9px;
+
+        margin: 0 auto 20px;
+    }
+
+    .filters input,
+    .filters select,
+    .filters button {
+        width: 100%;
+
+        min-width: 0;
+
+        height: 42px;
+
+        padding: 0 12px;
+
+        font-size: 13px;
+
+        border-radius: 9px;
+    }
+
+    .filters button {
+        font-weight: 600;
+    }
+
+
+    /* ======================================
+       JOB CARD - SMALLER MOBILE CARD
+    ====================================== */
+
+    .job-card {
+        width: 94%;
+
+        max-width: 360px;
+
+        padding: 16px 14px;
+
+        border-radius: 16px;
+
+        border-top-width: 4px;
+
+        margin: 0 auto;
+    }
+
+    .job-card:hover {
+        transform: none;
+    }
+
+
+    /* ======================================
+       JOB TOP
+    ====================================== */
+
+    .top {
+        gap: 10px;
+    }
+
+    .logo {
+        width: 46px;
+        height: 46px;
+
+        min-width: 46px;
+
+        border-radius: 11px;
+
+        font-size: 20px;
+    }
+
+    .top h2 {
+        font-size: 19px;
+        line-height: 1.2;
+    }
+
+    .top h3 {
+        font-size: 14px;
+        margin-top: 3px;
+    }
+
+
+    /* ======================================
+       TAGS
+    ====================================== */
+
+    .tags {
+        gap: 6px;
+
+        margin: 15px 0;
+    }
+
+    .tags span {
+        padding: 6px 10px;
+
+        font-size: 10px;
+    }
+
+
+    /* ======================================
+       DESCRIPTION
+    ====================================== */
+
+    #description {
+        font-size: 13px;
+
+        line-height: 1.55;
+
+        margin-bottom: 17px;
+    }
+
+
+    /* ======================================
+       SECTION TITLES
+    ====================================== */
+
+    .job-card h4 {
+        font-size: 13px;
+    }
+
+
+    /* ======================================
+       SKILLS
+    ====================================== */
+
+    .skills {
+        gap: 6px;
+
+        margin: 10px 0 17px;
+    }
+
+    .skills span {
+        padding: 6px 9px;
+
+        font-size: 10px;
+
+        border-radius: 7px;
+    }
+
+
+    /* ======================================
+       COMPATIBILITY
+    ====================================== */
+
+    .compatibility-box {
+        padding: 12px;
+
+        margin: 15px 0;
+
+        border-radius: 10px;
+    }
+
+    .compatibility-box h4 {
+        font-size: 13px;
+
+        margin-bottom: 8px;
+    }
+
+    .compatibility-box p {
+        font-size: 11px;
+
+        line-height: 1.45;
+    }
+
+
+    /* ======================================
+       SALARY / COMPETITION
+    ====================================== */
+
+    .bottom {
+        gap: 10px;
+
+        padding-top: 15px;
+    }
+
+    .bottom p {
+        font-size: 10px;
+
+        margin-bottom: 5px;
+    }
+
+    .bottom h3 {
+        font-size: 14px;
+    }
+
+
+    /* ======================================
+       META
+    ====================================== */
+
+    .job-meta {
+        justify-content: flex-start;
+
+        gap: 7px 12px;
+
+        padding: 10px 0;
+
+        font-size: 10px;
+    }
+
+
+    /* ======================================
+       ACTION BUTTONS
+    ====================================== */
+
+    .actions {
+        width: 100%;
+
+        gap: 16px;
+
+        margin-top: 18px;
+    }
+
+    .actions button {
+        width: 50px;
+        height: 50px;
+
+        font-size: 20px;
+    }
+
+}
+
+
+/* ==================================================
+   VERY SMALL MOBILE / SMALL IFRAME
+================================================== */
+
+@media (max-width: 360px) {
+
+    .page {
+        padding: 14px 6px 28px;
+    }
+
+    .navbar h2 {
+        font-size: 20px;
+    }
+
+    .filters {
+        width: 95%;
+        max-width: 320px;
+    }
+
+    .filters input,
+    .filters select,
+    .filters button {
+        height: 40px;
+
+        font-size: 12px;
+    }
+
+    .job-card {
+        width: 95%;
+
+        max-width: 320px;
+
+        padding: 14px 12px;
+
+        border-radius: 15px;
+    }
+
+    .logo {
+        width: 42px;
+        height: 42px;
+
+        min-width: 42px;
+
+        font-size: 18px;
+    }
+
+    .top h2 {
+        font-size: 17px;
+    }
+
+    .top h3 {
+        font-size: 12px;
+    }
+
+    .tags span {
+        font-size: 9px;
+
+        padding: 5px 8px;
+    }
+
+    #description {
+        font-size: 12px;
+    }
+
+    .skills span {
+        font-size: 9px;
+
+        padding: 5px 8px;
+    }
+
+    .compatibility-box p {
+        font-size: 10px;
+    }
+
+    .bottom {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .actions {
+        gap: 12px;
+    }
+
+    .actions button {
+        width: 46px;
+        height: 46px;
+
+        font-size: 18px;
+    }
+
 }
