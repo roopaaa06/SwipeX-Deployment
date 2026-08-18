@@ -15,7 +15,7 @@
     } else {
 
         window.SWIPEX_API_URL =
-            "https://backend-one-delta-70.vercel.app";
+            "https://swipe-x-deployment.vercel.app/";
 
     }
 
